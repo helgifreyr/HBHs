@@ -39,8 +39,8 @@ plot_gogn('750.0',0,0,1)
 
 xlabel(r'$w$')
 ylabel(r'$M$')
-xlim(0.95,0.97)
-ylim(0.5,1.5)
+xlim(0.94,0.98)
+ylim(0.5,2.5)
 curve = genfromtxt('zero-mode')
 curve_w = curve[:,0]
 curve_M = curve[:,1]
@@ -52,5 +52,5 @@ plot(no_int_w,no_int_M,'k')
 W = linspace(0.75,1.0,100)
 M = lambda w: 1/(2*w)
 plot(W,M(W),'k')
-legend()
+legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),ncol=3, fancybox=True,shadow=True)
 savefig('w-vs-M-cusps.png')
